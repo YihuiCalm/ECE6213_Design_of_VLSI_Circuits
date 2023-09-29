@@ -1,0 +1,3 @@
+s1(28Sep2023:14:25:53):  xmverilog ../../source/tail_light_sequencer.v -compile 
+s2(28Sep2023:14:25:54):  xmverilog ../testbench/tail_light_sequencer_tb.v -compile 
+s3(28Sep2023:14:25:54):  xmverilog ../testbench/tail_light_sequencer_tb.v +access+r 

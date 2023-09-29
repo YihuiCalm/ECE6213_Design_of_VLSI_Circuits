@@ -1,0 +1,6 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+../source/program_counter.v
+-compile

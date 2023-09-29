@@ -1,0 +1,110 @@
+xmverilog(64): 17.10-s001: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	xmverilog	17.10-s001: Started on Sep 28, 2023 at 23:15:50 EDT
+xmverilog
+	../testbench/elevator_top_tb.v
+	+access+r
+Recompiling... reason: file '../testbench/elevator_top_tb.v' is newer than expected.
+	expected: Thu Sep 28 22:38:09 2023
+	actual:   Thu Sep 28 23:15:46 2023
+xmverilog: *W,WKWTLK: Waiting for a Exclusive lock on file '/home/ead/yihui/ece6213/project3/simulation/work/xcelium.d/run.lnx8664.17.10.d/.xmlib.lock'. pid:123935.
+file: ../testbench/elevator_top_tb.v
+	module worklib.elevator_top_tb:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.elevator_top_tb:v <0x0cd35f0c>
+			streams:  15, words: 50543
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                10       4
+		Registers:              47      35
+		Scalar wires:           27       -
+		Always blocks:          23      11
+		Initial blocks:         28      28
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.elevator_top_tb:v
+Loading snapshot worklib.elevator_top_tb:v .................... Done
+xcelium> source /apps/vlsi_2018/cadence/XCELIUM1710/tools/xcelium/files/xmsimrc
+xcelium> run
+
+===============================================TESTBENCH===========================================
+---------------------------------------------------------------------------------------------------
+Testcase:  #0 Initializing                                             Time =                    0
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Testcase:  #1 Floor 1 -> Floor 2                                       Time =                10000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 1 due to Floor 1 UP button         @Time   25000
+  Elevator opened at Floor 2 due to Elevator Floor 2 button   @Time   57000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time  139000
+---------------------------------------------------------------------------------------------------
+Testcase:  #2 Floor 1 -> Floor 3                                       Time =               197000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 1 due to Floor 1 UP button         @Time  201000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time  253000
+  Elevator opened at Floor 2 due to Elevator Floor 2 button   @Time  315000
+---------------------------------------------------------------------------------------------------
+Testcase:  #3 Floor 2 -> Floor 3                                       Time =               373000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 2 due to Floor 2 UP button         @Time  377000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time  409000
+  Elevator opened at Floor 2 due to Elevator Floor 2 button   @Time  491000
+---------------------------------------------------------------------------------------------------
+Testcase:  #4 Floor 2 -> Floor 1                                       Time =               549000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 2 due to Floor 2 down button       @Time  553000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time  585000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time  687000
+---------------------------------------------------------------------------------------------------
+Testcase:  #5 Floor 3 -> Floor 2                                       Time =               725000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 3 due to Floor 3 down button       @Time  729000
+  Elevator opened at Floor 2 due to Elevator Floor 2 button   @Time  761000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time  843000
+---------------------------------------------------------------------------------------------------
+Testcase:  #6 Floor 3 -> Floor 1                                       Time =               901000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 3 due to Floor 3 down button       @Time  905000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time  957000
+---------------------------------------------------------------------------------------------------
+Testcase:  #7 Floor 1 -> Floor 3 / Pickup on Floor 2                   Time =               975000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 1 due to Floor 1 UP button         @Time  999000
+  Elevator opened at Floor 2 due to Floor 2 UP button         @Time 1031000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time 1063000
+---------------------------------------------------------------------------------------------------
+Testcase:  #8 Floor 3 -> Floor 1 / Pickup on Floor 2                   Time =              1089000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 3 due to Floor 3 down button       @Time 1093000
+  Elevator opened at Floor 2 due to Floor 2 down button       @Time 1125000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time 1157000
+---------------------------------------------------------------------------------------------------
+Testcase:  #9a Floor 1 -> Floor 3 / Pickup on Floor 2 pressed Floor 1  Time =              1183000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 1 due to Floor 1 UP button         @Time 1187000
+  Elevator opened at Floor 2 due to Floor 2 UP button         @Time 1219000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time 1251000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time 1303000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time 1363000
+---------------------------------------------------------------------------------------------------
+Testcase:  #9b Floor 3 -> Floor 1 / Pickup on Floor 2 pressed Floor 3  Time =              1401000
+---------------------------------------------------------------------------------------------------
+  Elevator opened at Floor 3 due to Floor 3 down button       @Time 1405000
+  Elevator opened at Floor 2 due to Floor 2 down button       @Time 1437000
+  Elevator opened at Floor 1 due to Elevator Floor 1 button   @Time 1469000
+  Elevator opened at Floor 3 due to Elevator Floor 3 button   @Time 1521000
+
+***************************
+FINAL ERROR COUNT:        0
+***************************
+===============================================FINISH==============================================
+
+Simulation complete via $finish(1) at time 1527 NS + 0
+../testbench/elevator_top_tb.v:362     $finish;
+xcelium> exit
+TOOL:	xmverilog	17.10-s001: Exiting on Sep 28, 2023 at 23:16:08 EDT  (total: 00:00:18)

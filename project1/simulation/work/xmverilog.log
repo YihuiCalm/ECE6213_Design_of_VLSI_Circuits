@@ -1,0 +1,58 @@
+xmverilog(64): 17.10-s001: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	xmverilog	17.10-s001: Started on Sep 19, 2023 at 23:31:07 EDT
+xmverilog
+	../testbench/program_counter_tb.v
+	+access+r
+Recompiling... reason: file '../testbench/program_counter_tb.v' is newer than expected.
+	expected: Tue Sep 19 23:29:28 2023
+	actual:   Tue Sep 19 23:30:51 2023
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.program_counter_tb:v <0x0bad800e>
+			streams:   3, words: 36646
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:              11      11
+		Scalar wires:            6       -
+		Vectored wires:          3       -
+		Always blocks:           3       3
+		Initial blocks:          2       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.program_counter_tb:v
+Loading snapshot worklib.program_counter_tb:v .................... Done
+xcelium> source /apps/vlsi_2018/cadence/XCELIUM1710/tools/xcelium/files/xmsimrc
+xcelium> run
+ mem_addr: Expected xx, Read xx, Time                   12
+ mem_addr: Expected 00, Read 00, Time                   13
+ mem_addr: Expected 00, Read 00, Time                   23
+ mem_addr: Expected 00, Read 00, Time                   33
+ mem_addr: Expected 01, Read 01, Time                   43
+ mem_addr: Expected 01, Read 01, Time                   53
+ mem_addr: Expected 02, Read 02, Time                   63
+ mem_addr: Expected 03, Read 03, Time                   73
+ mem_addr: Expected 00, Read 00, Time                   83
+ mem_addr: Expected 01, Read 01, Time                   93
+ mem_addr: Expected 01, Read 01, Time                  103
+ mem_addr: Expected 04, Read 04, Time                  113
+ mem_addr: Expected 04, Read 04, Time                  123
+ mem_addr: Expected 08, Read 08, Time                  133
+ mem_addr: Expected 09, Read 09, Time                  143
+ mem_addr: Expected 0a, Read 0a, Time                  153
+ mem_addr: Expected 0b, Read 0b, Time                  163
+ mem_addr: Expected 08, Read 08, Time                  173
+ mem_addr: Expected 0c, Read 0c, Time                  183
+ mem_addr: Expected 3c, Read 3c, Time                  193
+ mem_addr: Expected 28, Read 28, Time                  203
+ mem_addr: Expected 28, Read 28, Time                  213
+ mem_addr: Expected 24, Read 24, Time                  223
+ mem_addr: Expected 34, Read 34, Time                  233
+Simulation complete via $finish(1) at time 263 NS + 0
+../testbench/program_counter_tb.v:142         $finish;         
+xcelium> exit
+TOOL:	xmverilog	17.10-s001: Exiting on Sep 19, 2023 at 23:31:08 EDT  (total: 00:00:01)
